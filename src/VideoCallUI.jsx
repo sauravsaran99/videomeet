@@ -3,7 +3,9 @@ import "./App.css";
 import io from "socket.io-client";
 
 // Connect to the Socket.io server
-const socket = io("http://192.168.0.123:5000");
+const socket = io("http://3546-49-47-132-227.ngrok-free.app", {
+  transports: ["websocket"], // Force WebSocket transport
+});
 
 // Configuration for WebRTC STUN server
 const configuration = {
