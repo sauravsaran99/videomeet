@@ -3,7 +3,7 @@ import "./App.css";
 import io from "socket.io-client";
 
 // Connect to the Socket.io server
-const socket = io("http://192.168.0.111:5000/");
+const socket = io("http://192.168.0.123:5000");
 
 // Configuration for WebRTC STUN server
 const configuration = {
@@ -29,7 +29,7 @@ const VideoCallUI = () => {
         // Join room and notify server
         socket.emit("join-room", roomId, socket.id);
 
-        // BUG:Handle receiving offer from new participant
+        // Handle receiving offer from new participant
         socket.on("offer", async (offer, userId) => {
           const peerConnection = createPeerConnection(userId);
           await peerConnection.setRemoteDescription(

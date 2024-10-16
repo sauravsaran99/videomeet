@@ -10,10 +10,10 @@ import io from "socket.io-client";
 import "./App.css";
 import VideoCallUI from "./VideoCallUI";
 
-const socket = io("http://192.168.0.111:5000");
-const configuration = {
-  iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
-};
+// const socket = io("http://localhost:5000/");
+// const configuration = {
+//   iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
+// };
 
 function App() {
   // const [remoteStream, setRemoteStream] = useState(null);

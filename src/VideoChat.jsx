@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import io from "socket.io-client";
 
-const socket = io("http://192.168.0.111:5000/");
+const socket = io("http://192.168.0.123:5000");
 const configuration = {
   iceServers: [{ urls: "stun:stun.l.google.com:19302" }], // Using Google's free STUN server
 };
